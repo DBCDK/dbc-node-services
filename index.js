@@ -1,3 +1,5 @@
+require("babel/register");
+
 var api = require('./lib/api');
 
 module.exports = {
