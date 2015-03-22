@@ -1,8 +1,6 @@
-require("babel/register");
-
 var api = require('./lib/api');
 
 module.exports = {
- dispatcher : api.init,
+ init : api.init,
  modules : api.modules
 }
