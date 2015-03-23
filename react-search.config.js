@@ -1,1 +1,0 @@
-../configuration/react-search.config.js
