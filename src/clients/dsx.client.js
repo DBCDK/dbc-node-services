@@ -1,13 +1,13 @@
 "use strict";
-var config = require.main.require("./config.js").dsx;
+
 var Promise = require("es6-promise").Promise;
 var Client = require("node-rest-client").Client;
 var client = new Client();
 
 // registering remote methods
-client.registerMethod("search", config.endpoint + "search", "POST");
-client.registerMethod("recommend", config.endpoint + "recommend", "POST");
-client.registerMethod("rank", config.endpoint + "rank", "POST");
+client.registerMethod("search", "http://ml-t01.dbc.dk:8019/search", "POST");
+client.registerMethod("recommend", "http://ml-t01.dbc.dk:8019/recommend", "POST");
+client.registerMethod("rank", "http://ml-t01.dbc.dk:8019/rank", "POST");
 
 module.exports.search = function (data) {
   var args = {
