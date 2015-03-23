@@ -24,7 +24,6 @@ module.exports.recommend = function (data) {
     data: JSON.stringify({ like: data }) };
   return new Promise(function (resolve, reject) {
     client.methods.recommend(args, function (data, response) {
-      console.log(response, "resposne");
       resolve(JSON.parse(data));
     });
   });
@@ -32,9 +31,9 @@ module.exports.recommend = function (data) {
 
 module.exports.rank = function (data) {
   var args = {
-    data: JSON.stringify({ words: data }) };
+    data: JSON.stringify({ like: data.like, set: data.set }) };
   return new Promise(function (resolve, reject) {
-    client.methods.recomment(args, function (data, response) {
+    client.methods.rank(args, function (data, response) {
       resolve(JSON.parse(data));
     });
   });

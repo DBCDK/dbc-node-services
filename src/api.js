@@ -16,9 +16,11 @@ module.exports.init = function (io) {
   // Setup search listeners
   dispatcher.listen("search", search.search);
 
-  // Setup search listeners
+  // Setup dsx listeners
   dispatcher.listen("dsxSearch", dsx.search);
   dispatcher.listen("dsxRecommend", dsx.recommend);
+  dispatcher.listen("dsxRank", dsx.rank);
+  dispatcher.listen("dsxRankSearch", dsx.rankSearch);
 
   // Setup Cart listeners
   dispatcher.listen("getCart", cart.getCart);
