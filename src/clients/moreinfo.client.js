@@ -1,6 +1,6 @@
 "use strict";
 
-var baseclient = require("./Base.client"),
+var baseclient = require("./base.client"),
     config = baseclient.config.moreinfo,
     _default = {
   authentication: {

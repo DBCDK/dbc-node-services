@@ -1,6 +1,6 @@
 "use strict";
 
-var baseclient = require("./Base.client");
+var baseclient = require("./base.client");
 var config = baseclient.config.openuserinfo;
 
 var _default = {
