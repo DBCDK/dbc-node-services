@@ -1,0 +1,38 @@
+{
+  "name": "dbc-node-services",
+  "version": "0.0.0",
+  "description": "Library for using dbc services with node",
+  "main": "src/api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf src && broccoli build src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DBCDK/dbc-node-services.git"
+  },
+  "keywords": [
+    "DBC",
+    "services",
+    "api"
+  ],
+  "author": "team UX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DBCDK/dbc-node-services/issues"
+  },
+  "homepage": "https://github.com/DBCDK/dbc-node-services",
+  "dependencies": {
+    "babel": "^4.7.16",
+    "cache-manager": "^0.18.0",
+    "es6-promise": "^2.0.1",
+    "jsonpath-object-transform": "https://github.com/vibjerg/jsonpath-object-transform/archive/1.0.5.tar.gz",
+    "lodash": "^3.5.0",
+    "node-rest-client": "^1.4.4",
+    "soap": "^0.8.0"
+  },
+  "devDependencies": {
+    "broccoli": "^0.15.0",
+    "broccoli-babel-transpiler": "^4.0.1"
+  }
+}

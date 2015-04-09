@@ -1,0 +1,7 @@
+# ===============
+# IDEA GENERATED
+# ===============
+.idea
+*.iml
+
+node_modules
