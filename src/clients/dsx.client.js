@@ -2,12 +2,18 @@
 
 var Promise = require("es6-promise").Promise;
 var Client = require("node-rest-client").Client;
+var Config = require.main.require("./config.js");
 var client = new Client();
 
+var dsxEndpoint = Config.dsx.endpoint;
+var searchEndpoint = dsxEndpoint + "search";
+var recommendEndpoint = dsxEndpoint + "recommend";
+var rankEndpoint = dsxEndpoint + "rank";
+
 // registering remote methods
-client.registerMethod("search", "http://dsx-t01:8019/search", "POST");
-client.registerMethod("recommend", "http://dsx-t01:8019/recommend", "POST");
-client.registerMethod("rank", "http://dsx-t01:8019/rank", "POST");
+client.registerMethod("search", searchEndpoint, "POST");
+client.registerMethod("recommend", recommendEndpoint, "POST");
+client.registerMethod("rank", rankEndpoint, "POST");
 
 module.exports.search = function (data) {
   var args = {
