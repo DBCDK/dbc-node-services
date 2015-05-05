@@ -4,7 +4,7 @@
   "description": "Library for using dbc services with node",
   "main": "src/api.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest lib",
     "build": "rm -rf src && broccoli build src"
   },
   "repository": {
@@ -33,6 +33,13 @@
   },
   "devDependencies": {
     "broccoli": "^0.15.0",
-    "broccoli-babel-transpiler": "^4.0.1"
+    "broccoli-babel-transpiler": "^4.0.1",
+    "jest-cli": "^0.4.0",
+    "istanbul": "^0.3.0",
+    "jasmine-reporters": "^1.0.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "setupTestFrameworkScriptFile": "<rootDir>/setup-jasmine-env.js"
   }
 }
