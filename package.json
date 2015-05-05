@@ -1,6 +1,6 @@
 {
   "name": "dbc-node-services",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Library for using dbc services with node",
   "main": "src/api.js",
   "scripts": {
