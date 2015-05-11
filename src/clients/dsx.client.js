@@ -10,10 +10,10 @@ var client = new Client();
  * @type {Object}
  */
 var serviceNameSpaces = {
-  search: process_env.DSX_SEARCH || "search",
-  recommend: process_env.DSX_RECOMMEND || "recommend",
-  rank: process_env.DSX_RANK || "rank" };
-var dsxEndpoint = process_env.DSX_URL || Config.dsx.endpoint;
+  search: process.env.DSX_SEARCH || "search",
+  recommend: process.env.DSX_RECOMMEND || "recommend",
+  rank: process.env.DSX_RANK || "rank" };
+var dsxEndpoint = process.env.DSX_URL || Config.dsx.endpoint;
 var searchEndpoint = dsxEndpoint + serviceNameSpaces.search;
 var recommendEndpoint = dsxEndpoint + serviceNameSpaces.recommend;
 var rankEndpoint = dsxEndpoint + serviceNameSpaces.rank;
